@@ -1,0 +1,32 @@
+docker run --name alan.krg-23.com_db --net dockerwordpressnet -v /var/www/alan.krg-23.com/database/data:/var/lib/mysql -v /var/www/alan.krg-23.com/database/initdb.d/20221014.c2bdd_alan.sql:/docker-entrypoint-initdb.d/20221014.c2bdd_alan.sql -e MYSQL_ROOT_PASSWORD=Lhoos1eoQ- -e MYSQL_DATABASE=c2bdd_alan -e MYSQL_USER=c2bdduser_alan -e MYSQL_PASSWORD=Lhoos1eoQ- -d --restart always mysql:5.7
+
+
+docker run --name alan.krg-23.com_wp --net dockerwordpressnet -v /var/www/alan.krg-23.com:/var/www/html -v /var/www/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini -e WORDPRESS_DB_HOST=alan.krg-23.com_db:3306 -e WORDPRESS_DB_NAME=c2bdd_alan -e WORDPRESS_DB_USER=c2bdduser_alan -e WORDPRESS_DB_PASSWORD=Lhoos1eoQ- -e VIRTUAL_HOST=alan.krg-23.com -e LETSENCRYPT_HOST=alan.krg-23.com -e LETSENCRYPT_EMAIL=webmasta@krg-23.com  -d --restart always wordpress
+
+
+docker run --name aus-nz.krg-23.com_db --net dockerwordpressnet -v /var/www/aus-nz.krg-23.com/database/data:/var/lib/mysql -v /var/www/aus-nz.krg-23.com/database/initdb.d/20221014.c5bdd_dm.sql:/docker-entrypoint-initdb.d/20221014.c5bdd_dm.sql -e MYSQL_ROOT_PASSWORD=Lhoos1eoQ- -e MYSQL_DATABASE=c5bdd_dm -e MYSQL_USER=c5bdduser_dm -e MYSQL_PASSWORD=Lhoos1eoQ- -d --restart always mysql:5.7
+
+
+docker run --name aus-nz.krg-23.com_wp --net dockerwordpressnet -v /var/www/aus-nz.krg-23.com:/var/www/html -v /var/www/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini -e WORDPRESS_DB_HOST=aus-nz.krg-23.com_db:3306 -e WORDPRESS_DB_NAME=c5bdd_dm -e WORDPRESS_DB_USER=c5bdduser_dm -e WORDPRESS_DB_PASSWORD=Lhoos1eoQ- -e VIRTUAL_HOST=aus-nz.krg-23.com -e LETSENCRYPT_HOST=aus-nz.krg-23.com -e LETSENCRYPT_EMAIL=webmasta@krg-23.com  -d --restart always wordpress
+
+docker run --name benjulie.krg-23.com_db --net dockerwordpressnet -v /var/www/benjulie.krg-23.com/database/data:/var/lib/mysql -v /var/www/benjulie.krg-23.com/database/initdb.d/20221014.c10bdd_bj.sql:/docker-entrypoint-initdb.d/20221014.c10bdd_bj.sql -e MYSQL_ROOT_PASSWORD=Lhoos1eoQ- -e MYSQL_DATABASE=c10bdd_bj -e MYSQL_USER=c10bdduser_bj -e MYSQL_PASSWORD=Lhoos1eoQ- -d --restart always mysql:5.7
+
+
+docker run --name yael.krg-23.com_wp --net dockerwordpressnet -v /var/www/yael.krg-23.com:/var/www/html -v /var/www/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini -e WORDPRESS_DB_HOST=yael.krg-23.com_db:3306 -e WORDPRESS_DB_NAME=c6bdd_yael -e WORDPRESS_DB_USER=c10bdduser_bj -e WORDPRESS_DB_PASSWORD=Lhoos1eoQ- -e VIRTUAL_HOST=yael.krg-23.com -e LETSENCRYPT_HOST=yael.krg-23.com -e LETSENCRYPT_EMAIL=webmasta@krg-23.com  -d --restart always wordpress
+
+docker run --name yael.krg-23.com_db --net dockerwordpressnet -v /var/www/yael.krg-23.com/database/data:/var/lib/mysql -v /var/www/yael.krg-23.com/database/initdb.d/20221014.c6bdd_yael.sql:/docker-entrypoint-initdb.d/20221014.c6bdd_yael.sql -e MYSQL_ROOT_PASSWORD=Lhoos1eoQ- -e MYSQL_DATABASE=c6bdd_yael -e MYSQL_USER=c10bdduser_bj -e MYSQL_PASSWORD=Lhoos1eoQ- -d --restart always mysql:5.7
+
+
+docker run --name yael.krg-23.com_wp --net dockerwordpressnet -v /var/www/yael.krg-23.com:/var/www/html -v /var/www/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini -e WORDPRESS_DB_HOST=yael.krg-23.com_db:3306 -e WORDPRESS_DB_NAME=c10bdd_bj -e WORDPRESS_DB_USER=c10bdduser_bj -e WORDPRESS_DB_PASSWORD=Lhoos1eoQ- -e VIRTUAL_HOST=yael.krg-23.com -e LETSENCRYPT_HOST=yael.krg-23.com -e LETSENCRYPT_EMAIL=webmasta@krg-23.com  -d --restart always wordpress
+
+
+docker run --name mjb.krg-23.com_db --net dockerwordpressnet -v /var/www/mjb.krg-23.com/database/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Lhoos1eoQ- -e MYSQL_DATABASE=mjb_db -e MYSQL_USER=mjb_user -e MYSQL_PASSWORD=Lhoos1eoQ- -d --restart always mysql:5.7
+
+
+docker run --name mjb.krg-23.com_wp --net dockerwordpressnet -v /var/www/mjb.krg-23.com:/var/www/html -v /var/www/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini -e WORDPRESS_DB_HOST=mjb.krg-23.com_db:3306 -e WORDPRESS_DB_NAME=mjb_db -e WORDPRESS_DB_USER=mjb_user -e WORDPRESS_DB_PASSWORD=Lhoos1eoQ- -e VIRTUAL_HOST=mjb.krg-23.com -e LETSENCRYPT_HOST=mjb.krg-23.com -e LETSENCRYPT_EMAIL=webmasta@krg-23.com  -d --restart always wordpress
+
+
+docker run --name adm.krg-23.com_db --net dockerwordpressnet -v /var/www/adm.krg-23.com/database/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Lhoos1eoQ- -e MYSQL_DATABASE=adm_db -e MYSQL_USER=adm_user -e MYSQL_PASSWORD=Lhoos1eoQ- -d --restart always mysql:5.7
+
+
+docker run --name adm.krg-23.com_wp --net dockerwordpressnet -v /var/www/adm.krg-23.com:/var/www/html -v /var/www/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini -e WORDPRESS_DB_HOST=adm.krg-23.com_db:3306 -e WORDPRESS_DB_NAME=adm_db -e WORDPRESS_DB_USER=adm_user -e WORDPRESS_DB_PASSWORD=Lhoos1eoQ- -e VIRTUAL_HOST=adm.krg-23.com -e LETSENCRYPT_HOST=adm.krg-23.com -e LETSENCRYPT_EMAIL=webmasta@krg-23.com  -d --restart always wordpress
