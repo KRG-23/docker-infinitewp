@@ -9,11 +9,11 @@ RUN \
 
 WORKDIR /tmp
 
-COPY IWPAdminPanel_v$IWP_VERSION.zip /tmp
+COPY iwp-admin-panel-installer_v$IWP_VERSION.zip /tmp
 
 RUN \
-  unzip IWPAdminPanel_v$IWP_VERSION.zip && \
-  mv IWPAdminPanel_v$IWP_VERSION iwp && \
+  unzip iwp-admin-panel-installer_v$IWP_VERSION.zip && \
+  mv iwp-admin-panel-installer_v$IWP_VERSION iwp && \
   if [ ! "$INSTALL" = true ]; then rm -rf iwp/install; fi
 
 FROM php:7.0-apache
